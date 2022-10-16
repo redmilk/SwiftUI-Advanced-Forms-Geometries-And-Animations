@@ -1,24 +1,20 @@
 //
-//  SwiftUIView.swift
+//  CustomViews.swift
 //  Test
 //
-//  Created by Danyl Timofeyev on 15.10.2022.
+//  Created by Danyl Timofeyev on 16.10.2022.
 //
 
 import SwiftUI
 
-// MARK: - View Modifier
-struct SonyaFormatter: ViewModifier {
-    func body(content: Content) -> some View {
-        content
+// MARK: - Custom Views
+
+struct SampleLabelTwo: View {
+    var body: some View {
+        Label("Label example", systemImage: "person.circle.fill")
             .font(.largeTitle)
-            .background(Color.white)
-            .cornerRadius(20)
-            .border(Color.gray, width: 0.2)
-            .shadow(color: Color.cyan, radius: 2, x: 0, y: 5)
     }
 }
-
 
 struct SampleLabelView: View {
     var body: some View {
@@ -102,80 +98,5 @@ struct ModuleItemSampleView: View {
             .modifier(SonyaFormatter())
         }
         .padding()
-    }
-}
-
-
-// MARK: - VIEW
-struct SwiftUIView: View {
-    
-    @State private var userName = "default"
-    @State private var wifiEnabled = true
-    
-    var moduleOne: some View {
-        VStack {
-            SampleLabelView()
-            WifiSampleView(wifiEnabled: $wifiEnabled)
-            TextFieldSampleView(userName: $userName)
-            ButtonSampleView(userName: $userName)
-            FlightTextSampleView()
-            ModuleItemSampleView()
-        }
-    }
-    
-    var body: some View {
-        moduleOne
-    }
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-struct SwiftUIView_Previews: PreviewProvider {
-    static var previews: some View {
-        SwiftUIView()
     }
 }
