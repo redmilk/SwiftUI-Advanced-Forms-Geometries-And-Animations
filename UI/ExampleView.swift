@@ -6,29 +6,50 @@
 //
 
 import SwiftUI
+import Combine
 
 // MARK: - VIEW
 struct ExampleView: View {
     
-    @State private var userName = "default"
-    @State private var wifiEnabled = true
-    
-    var moduleOne: some View {
+    let mainService = MainService()
+        
+    var body: some View {
         VStack {
             SampleLabelTwo()
             SampleLabelView()
-            WifiSampleView(wifiEnabled: $wifiEnabled)
-            TextFieldSampleView(userName: $userName)
-            ButtonSampleView(userName: $userName)
+            WifiSampleView()
+            TextFieldSampleView()
+            ButtonSampleView()
             FlightTextSampleView()
             ModuleItemSampleView()
         }
-    }
-    
-    var body: some View {
-        moduleOne
+        .environmentObject(mainService)
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 struct ExampleView_Previews: PreviewProvider {

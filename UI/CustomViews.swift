@@ -30,25 +30,25 @@ struct SampleLabelView: View {
 }
 
 struct WifiSampleView: View {
-    @Binding var wifiEnabled: Bool
+    @EnvironmentObject var mainService: MainService
     
     var body: some View {
         HStack {
-            Image(systemName: wifiEnabled ? "wifi" : "wifi.slash")
-            Toggle(isOn: $wifiEnabled) {
+            Image(systemName: mainService.wifiEnabled ? "wifi" : "wifi.slash")
+            Toggle(isOn: $mainService.wifiEnabled) {
                 Text("Enable Wi-Fi")
             }
-            .shadow(color: wifiEnabled ? .clear : .red, radius: 1, x: 0, y: 5)
+            .shadow(color: mainService.wifiEnabled ? .clear : .red, radius: 1, x: 0, y: 5)
         }
         .padding()
     }
 }
 
 struct TextFieldSampleView: View {
-    @Binding var userName: String
-    
+    @EnvironmentObject var mainService: MainService
+
     var body: some View {
-        TextField("Enter user name", text: $userName)
+        TextField("Enter user name", text: $mainService.userName)
             .font(.title)
             .padding()
             .border(.black, width: 10)
@@ -58,11 +58,11 @@ struct TextFieldSampleView: View {
 }
 
 struct ButtonSampleView: View {
-    @Binding var userName: String
+    @EnvironmentObject var mainService: MainService
 
     var body: some View {
-        Button(userName, action: {
-            userName = ["qwe", "rty", "uio", "asd", "fgh"][Int.random(in: 0...3)]
+        Button(mainService.userName, action: {
+            mainService.userName = ["qwe", "rty", "uio", "asd", "fgh"][Int.random(in: 0...3)]
         })
         .padding()
         .modifier(SonyaFormatter())
