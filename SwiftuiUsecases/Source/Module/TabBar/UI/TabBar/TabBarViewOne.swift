@@ -8,24 +8,76 @@
 import SwiftUI
 
 struct TabBarViewOne: View {
-    @State var title = "View One"
+    @State var title = "Async task sample"
     
     var body: some View {
-        Text(title)
-            .onAppear {
-                title = "View One"
-                print("View One did appear")
+        VStack {
+            Divider()
+            // MARK: - Async await
+            Text(title)
+                .fontWeight(.heavy)
+                .font(.largeTitle)
+                .onAppear {
+                    title = "Async task sample"
+                    print("View One did appear")
+                }
+                .onDisappear {
+                    print("View One did disappear")
+                }
+                .task(priority: .background) {
+                    title = await changeTitle()
+                }
+            
+            // MARK: - Alignment guide
+            Divider()
+            Text("alignmentGuide")
+
+            VStack(alignment: .leading) {
+                Rectangle()
+                    .foregroundColor(Color.green)
+                    .frame(width: 120, height: 50)
+                Rectangle()
+                    .foregroundColor(Color.red)
+                    .alignmentGuide(.leading, computeValue: { d in 120.0 })
+                    .frame(width: 200, height: 50)
+                Rectangle()
+                    .foregroundColor(Color.blue)
+                    .frame(width: 180, height: 50)
             }
-            .onDisappear {
-                print("View One did disappear")
+            
+            Spacer()
+            Text("alignmentGuide dimensions")
+            VStack(alignment: .leading) {
+                Rectangle()
+                    .foregroundColor(Color.green)
+                    .frame(width: 120, height: 50)
+                Rectangle()
+                    .foregroundColor(Color.red)
+                    .alignmentGuide(.leading,
+            computeValue: { d in d.width / 3 }) .frame(width: 200, height: 50)
+                Rectangle()
+                    .foregroundColor(Color.blue)
+                    .frame(width: 180, height: 50)
             }
-            .task(priority: .background) {
-                title = await changeTitle()
+            
+            Text("alignmentGuide dimensions Horizontal/Vertical Alignment")
+            VStack(alignment: .leading) {
+                Rectangle()
+                    .foregroundColor(Color.green)
+                    .frame(width: 120, height: 50)
+                Rectangle()
+                    .foregroundColor(Color.red)
+                    .alignmentGuide(.leading,
+            computeValue: { d in d[HorizontalAlignment.trailing] + 20 }) .frame(width: 200, height: 50)
+                Rectangle()
+                    .foregroundColor(Color.blue)
+                    .frame(width: 180, height: 50)
             }
+        }
     }
     
     func changeTitle() async -> String {
-        Thread.sleep(forTimeInterval: 5)
+        Thread.sleep(forTimeInterval: 2)
         return "Async task complete"
     }
 }
