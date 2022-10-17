@@ -10,6 +10,7 @@
 		7935AB6C28FC3F900089119A /* CustomViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7935AB6B28FC3F900089119A /* CustomViews.swift */; };
 		7935AB6E28FC3FEA0089119A /* ViewModifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7935AB6D28FC3FEA0089119A /* ViewModifiers.swift */; };
 		7935AB7528FD9C450089119A /* MainService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7935AB7428FD9C450089119A /* MainService.swift */; };
+		7964F8A728FDABF200E0FC3E /* RotationSliderSample.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7964F8A628FDABF200E0FC3E /* RotationSliderSample.swift */; };
 		79B1931628FC38EF00FEFA1E /* ExampleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79B1931528FC38EF00FEFA1E /* ExampleView.swift */; };
 		79D2FC2E28CFA60B007DC3B3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79D2FC2D28CFA60B007DC3B3 /* AppDelegate.swift */; };
 		79D2FC3028CFA60B007DC3B3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79D2FC2F28CFA60B007DC3B3 /* SceneDelegate.swift */; };
@@ -23,6 +24,7 @@
 		7935AB6B28FC3F900089119A /* CustomViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomViews.swift; sourceTree = "<group>"; };
 		7935AB6D28FC3FEA0089119A /* ViewModifiers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModifiers.swift; sourceTree = "<group>"; };
 		7935AB7428FD9C450089119A /* MainService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainService.swift; sourceTree = "<group>"; };
+		7964F8A628FDABF200E0FC3E /* RotationSliderSample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RotationSliderSample.swift; sourceTree = "<group>"; };
 		79B1931528FC38EF00FEFA1E /* ExampleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExampleView.swift; sourceTree = "<group>"; };
 		79D2FC2A28CFA60B007DC3B3 /* Test.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Test.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		79D2FC2D28CFA60B007DC3B3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -48,6 +50,7 @@
 		7935AB6F28FC405F0089119A /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				7964F8A528FDABC600E0FC3E /* View */,
 				79B1931528FC38EF00FEFA1E /* ExampleView.swift */,
 				7935AB6B28FC3F900089119A /* CustomViews.swift */,
 				7935AB6D28FC3FEA0089119A /* ViewModifiers.swift */,
@@ -61,6 +64,14 @@
 				7935AB7428FD9C450089119A /* MainService.swift */,
 			);
 			path = Domain;
+			sourceTree = "<group>";
+		};
+		7964F8A528FDABC600E0FC3E /* View */ = {
+			isa = PBXGroup;
+			children = (
+				7964F8A628FDABF200E0FC3E /* RotationSliderSample.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		79D2FC2128CFA60B007DC3B3 = {
@@ -168,6 +179,7 @@
 			files = (
 				7935AB7528FD9C450089119A /* MainService.swift in Sources */,
 				79D2FC3228CFA60B007DC3B3 /* ViewController.swift in Sources */,
+				7964F8A728FDABF200E0FC3E /* RotationSliderSample.swift in Sources */,
 				79D2FC2E28CFA60B007DC3B3 /* AppDelegate.swift in Sources */,
 				7935AB6C28FC3F900089119A /* CustomViews.swift in Sources */,
 				7935AB6E28FC3FEA0089119A /* ViewModifiers.swift in Sources */,

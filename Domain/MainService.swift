@@ -7,7 +7,11 @@
 
 import Combine
 
+class ViewState {
+    var userName = "default"
+    var wifiEnabled = true
+}
+
 final class MainService: ObservableObject {
-    @Published var userName = "default"
-    @Published var wifiEnabled = true
+    @Published var viewState = ViewState()
 }

@@ -34,11 +34,11 @@ struct WifiSampleView: View {
     
     var body: some View {
         HStack {
-            Image(systemName: mainService.wifiEnabled ? "wifi" : "wifi.slash")
-            Toggle(isOn: $mainService.wifiEnabled) {
+            Image(systemName: mainService.viewState.wifiEnabled ? "wifi" : "wifi.slash")
+            Toggle(isOn: $mainService.viewState.wifiEnabled) {
                 Text("Enable Wi-Fi")
             }
-            .shadow(color: mainService.wifiEnabled ? .clear : .red, radius: 1, x: 0, y: 5)
+            .shadow(color: mainService.viewState.wifiEnabled ? .clear : .red, radius: 1, x: 0, y: 5)
         }
         .padding()
     }
@@ -48,7 +48,7 @@ struct TextFieldSampleView: View {
     @EnvironmentObject var mainService: MainService
 
     var body: some View {
-        TextField("Enter user name", text: $mainService.userName)
+        TextField("Enter user name", text: $mainService.viewState.userName)
             .font(.title)
             .padding()
             .border(.black, width: 10)
@@ -61,8 +61,8 @@ struct ButtonSampleView: View {
     @EnvironmentObject var mainService: MainService
 
     var body: some View {
-        Button(mainService.userName, action: {
-            mainService.userName = ["qwe", "rty", "uio", "asd", "fgh"][Int.random(in: 0...3)]
+        Button(mainService.viewState.userName, action: {
+            mainService.viewState.userName = ["qwe", "rty", "uio", "asd", "fgh"][Int.random(in: 0...3)]
         })
         .padding()
         .modifier(SonyaFormatter())

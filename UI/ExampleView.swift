@@ -16,9 +16,12 @@ struct ExampleView: View {
     var body: some View {
         VStack {
             SampleLabelTwo()
+            Divider()
             SampleLabelView()
             WifiSampleView()
+            Divider()
             TextFieldSampleView()
+            Divider()
             ButtonSampleView()
             FlightTextSampleView()
             ModuleItemSampleView()
