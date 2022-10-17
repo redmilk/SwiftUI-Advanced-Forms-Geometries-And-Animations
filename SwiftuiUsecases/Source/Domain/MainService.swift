@@ -7,7 +7,7 @@
 
 import Combine
 
-class ViewState {
+struct ViewState {
     var userName = "default"
     var wifiEnabled = true
 }
