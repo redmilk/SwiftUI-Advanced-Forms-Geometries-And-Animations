@@ -10,7 +10,7 @@ import SwiftUI
 @main
 struct SwiftuiUsecasesApp: App {
     
-    @Environment(\.scenePhase) private var scenePhase
+//    @Environment(\.scenePhase) private var scenePhase
     
     let persistenceController = PersistenceController.shared
 
@@ -19,13 +19,13 @@ struct SwiftuiUsecasesApp: App {
             ExampleView()
                 .environment(\.managedObjectContext, persistenceController.container.viewContext)
         }
-        .onChange(of: scenePhase) { newValue in
-            switch newValue {
-            case .active: print("Active")
-            case .inactive: print("Inactive")
-            case .background: print("Background")
-            default: print("Uknown phase")
-            }
-        }
+//        .onChange(of: scenePhase) { newValue in
+//            switch newValue {
+//            case .active: print("Active")
+//            case .inactive: print("Inactive")
+//            case .background: print("Background")
+//            default: print("Uknown phase")
+//            }
+//        }
     }
 }

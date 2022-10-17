@@ -1,18 +1,15 @@
 //
-//  ExampleView.swift
-//  Test
+//  TabBarViewThree.swift
+//  SwiftuiUsecases
 //
-//  Created by Danyl Timofeyev on 16.10.2022.
+//  Created by Danyl Timofeyev on 17.10.2022.
 //
 
 import SwiftUI
-import Combine
 
-// MARK: - VIEW
-struct ExampleView: View {
-    
+struct TabBarViewThree: View {
     let mainService = MainService()
-        
+
     var body: some View {
         VStack {
             SampleLabelTwo()
@@ -22,7 +19,6 @@ struct ExampleView: View {
             Divider()
             TextFieldSampleView()
             Divider()
-
             ButtonSampleView()
             FlightTextSampleView()
             ModuleItemSampleView()
@@ -31,33 +27,8 @@ struct ExampleView: View {
     }
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-struct ExampleView_Previews: PreviewProvider {
+struct TabBarViewThree_Previews: PreviewProvider {
     static var previews: some View {
-        ExampleView()
+        TabBarViewThree()
     }
 }

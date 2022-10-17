@@ -1,14 +1,21 @@
 //
-//  ContentView.swift
+//  TabBarViewFour.swift
 //  SwiftuiUsecases
 //
 //  Created by Danyl Timofeyev on 17.10.2022.
 //
 
 import SwiftUI
-import CoreData
 
-struct ContentView: View {
+private let itemFormatter: DateFormatter = {
+    let formatter = DateFormatter()
+    formatter.dateStyle = .short
+    formatter.timeStyle = .medium
+    return formatter
+}()
+
+// MARK: - View
+struct TabBarViewFour: View {
     @Environment(\.managedObjectContext) private var viewContext
 
     @FetchRequest(
@@ -74,15 +81,8 @@ struct ContentView: View {
     }
 }
 
-private let itemFormatter: DateFormatter = {
-    let formatter = DateFormatter()
-    formatter.dateStyle = .short
-    formatter.timeStyle = .medium
-    return formatter
-}()
-
-struct ContentView_Previews: PreviewProvider {
+struct TabBarViewFour_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView().environment(\.managedObjectContext, PersistenceController.preview.container.viewContext)
+        TabBarViewFour()
     }
 }
