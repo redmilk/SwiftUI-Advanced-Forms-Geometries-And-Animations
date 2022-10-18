@@ -68,12 +68,14 @@ struct TabBarViewOne: View {
                 Rectangle()
                     .foregroundColor(Color.red)
                     .alignmentGuide(.leading,
-            computeValue: { d in d[HorizontalAlignment.trailing] + 20 }) .frame(width: 200, height: 50)
+                                    computeValue: { d in d[HorizontalAlignment.leading] - 100 })
+                    .frame(width: 200, height: 50)
                 Rectangle()
                     .foregroundColor(Color.blue)
                     .frame(width: 180, height: 50)
             }
         }
+        .padding()
     }
     
     func changeTitle() async -> String {

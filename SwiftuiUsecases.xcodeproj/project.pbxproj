@@ -24,6 +24,7 @@
 		792309C328FDEE3400F1D839 /* RotationSliderSample.swift in Sources */ = {isa = PBXBuildFile; fileRef = 792309BA28FDEE3400F1D839 /* RotationSliderSample.swift */; };
 		79886C5328FDF7730038C70B /* TabBarViewThree.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79886C5228FDF7730038C70B /* TabBarViewThree.swift */; };
 		79886C5528FDFB500038C70B /* TabBarViewFour.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79886C5428FDFB500038C70B /* TabBarViewFour.swift */; };
+		79886C5828FF44880038C70B /* TabBarZero.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79886C5728FF44870038C70B /* TabBarZero.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -64,6 +65,7 @@
 		792309BA28FDEE3400F1D839 /* RotationSliderSample.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RotationSliderSample.swift; sourceTree = "<group>"; };
 		79886C5228FDF7730038C70B /* TabBarViewThree.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewThree.swift; sourceTree = "<group>"; };
 		79886C5428FDFB500038C70B /* TabBarViewFour.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewFour.swift; sourceTree = "<group>"; };
+		79886C5728FF44870038C70B /* TabBarZero.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarZero.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -165,6 +167,7 @@
 			isa = PBXGroup;
 			children = (
 				792309B128FDEE3400F1D839 /* ExampleView.swift */,
+				79886C5728FF44870038C70B /* TabBarZero.swift */,
 				792309B928FDEE3400F1D839 /* TabBarViewOne.swift */,
 				792309B828FDEE3400F1D839 /* TabBarViewTwo.swift */,
 				79886C5228FDF7730038C70B /* TabBarViewThree.swift */,
@@ -385,6 +388,7 @@
 			files = (
 				792309C128FDEE3400F1D839 /* TabBarViewTwo.swift in Sources */,
 				7923098928FDEDC600F1D839 /* Persistence.swift in Sources */,
+				79886C5828FF44880038C70B /* TabBarZero.swift in Sources */,
 				792309BB28FDEE3400F1D839 /* MainService.swift in Sources */,
 				792309BD28FDEE3400F1D839 /* CustomViews.swift in Sources */,
 				792309BF28FDEE3400F1D839 /* ViewModifiers.swift in Sources */,
