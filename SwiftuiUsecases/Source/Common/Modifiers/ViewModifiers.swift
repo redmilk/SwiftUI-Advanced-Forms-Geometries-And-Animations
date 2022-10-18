@@ -19,3 +19,21 @@ struct SonyaFormatter: ViewModifier {
             .shadow(color: Color.cyan, radius: 2, x: 0, y: 5)
     }
 }
+
+
+
+extension Text {
+    static func getHeavyBold(_ text: String) -> Text {
+        Text(text)
+            .fontWeight(.heavy)
+            .font(.largeTitle)
+    }
+}
+
+//struct BigBoldTitleModifier: ViewModifier {
+//    func body(content: Content) -> some View {
+//        content
+//            .fontWeight(.heavy)
+//            .font(.largeTitle)
+//    }
+//}

@@ -31,7 +31,7 @@ extension Alignment {
 }
 
 
-struct TabBarZero: View {
+struct TabBarViewZero: View {
     var body: some View {
         VStack(alignment: .leading, spacing: 20) {
             Text("Custom alignments")
@@ -149,6 +149,6 @@ struct TabBarZero: View {
 
 struct TabBarZero_Previews: PreviewProvider {
     static var previews: some View {
-        TabBarZero()
+        TabBarViewZero()
     }
 }

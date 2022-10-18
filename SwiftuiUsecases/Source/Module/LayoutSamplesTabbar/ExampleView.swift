@@ -13,6 +13,12 @@ struct ExampleView: View {
     
     var body: some View {
         TabView {
+            TabBarViewZero()
+                .tabItem {
+                    Image(systemName: "00.circle")
+                    Text("Zero")
+                }
+            
             TabBarViewOne()
                 .tabItem {
                     Image(systemName: "01.circle")
